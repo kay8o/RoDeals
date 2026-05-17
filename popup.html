@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            font-family: Arial;
+            width: 220px;
+            padding: 12px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 24px;
+            height: 24px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        label {
+            font-size: 13px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 8px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.15s ease;
+        }
+
+        .green {
+            background: #00b06f;
+            color: white;
+        }
+
+        .green:hover {
+            background: #00cc7a;
+        }
+
+        .dark {
+            background: #111;
+            color: white;
+        }
+
+        .dark:hover {
+            background: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="icon48.png" class="logo">
+        <h3>RoDeals</h3>
+    </div>
+
+    <label>
+        <input type="checkbox" id="popupToggle">
+        Full-screen popup
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox" id="buttonToggle">
+        Save 40% button
+    </label>
+
+    <button class="dark" id="openSettings">
+        Open Extension Settings
+    </button>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
