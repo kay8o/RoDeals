@@ -6,11 +6,11 @@
 
 <div align="center">
 
-![License](https://img.shields.io/github/license/kay8o/RoDeals)
-![Version](https://img.shields.io/github/v/release/kay8o/RoDeals)
-![Stars](https://img.shields.io/github/stars/kay8o/RoDeals)
-![Issues](https://img.shields.io/github/issues/kay8o/RoDeals)
-![Downloads](https://img.shields.io/github/downloads/kay8o/RoDeals/total)
+![License](https://img.shields.io/github/license/kay8o/RoDeals?cacheSeconds=0)
+![Version](https://img.shields.io/github/v/release/kay8o/RoDeals?cacheSeconds=0)
+![Stars](https://img.shields.io/github/stars/kay8o/RoDeals?cacheSeconds=0)
+![Issues](https://img.shields.io/github/issues/kay8o/RoDeals?cacheSeconds=0)
+![Downloads](https://img.shields.io/github/downloads/kay8o/RoDeals/total?cacheSeconds=0)
 
 </div>
 
