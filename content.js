@@ -23,9 +23,26 @@ function isCatalogPage(url) {
    FULLSCREEN POPUP
 ========================= */
 function createPopup() {
-    if (!settings.popup) return;
 
+function isRobloxDarkTheme() {
+    const bg = getComputedStyle(document.body).backgroundColor;
+
+    const rgb = bg.match(/\d+/g);
+
+    if (!rgb || rgb.length < 3) {
+        return true;
+    }
+
+    const brightness =
+        (parseInt(rgb[0]) * 299 +
+         parseInt(rgb[1]) * 587 +
+         parseInt(rgb[2]) * 114) / 1000;
+
+    return brightness < 128;
+}
+    if (!settings.popup) return;
     if (document.getElementById("roblox-catalog-overlay")) return;
+    
 
     const overlay = document.createElement("div");
     overlay.id = "roblox-catalog-overlay";
@@ -50,6 +67,13 @@ function createPopup() {
             Open Roblox Game
         </a>
     `;
+
+    // Apply theme
+    if (isRobloxDarkTheme()) {
+    popup.classList.add("rodeals-dark");
+} else {
+    popup.classList.add("rodeals-light");
+}
 
     overlay.appendChild(popup);
     document.body.appendChild(overlay);
