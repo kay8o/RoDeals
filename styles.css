@@ -75,3 +75,25 @@
         opacity: 1;
     }
 }
+
+.rodeals-dark {
+    background: #1f1f1f !important;
+    color: white !important;
+}
+
+.rodeals-dark p {
+    color: #bdbdbd !important;
+}
+
+.rodeals-light {
+    background: white !important;
+    color: #111 !important;
+}
+
+.rodeals-light p {
+    color: #555 !important;
+}
+
+.rodeals-light #roblox-popup-close {
+    color: #111 !important;
+}
