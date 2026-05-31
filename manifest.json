@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "RoDeals",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Find Roblox item deals while browsing.",
 
   "permissions": ["storage"],
