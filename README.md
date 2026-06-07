@@ -3,6 +3,8 @@
 
 > [!IMPORTANT]
 > This extension is fully open source. All source code can be inspected directly in this repository.
+> 
+> RoDeals is not affiliated, associated, or endorsed by Roblox Corporation.
 
 <div align="center">
 
@@ -233,5 +235,10 @@ See the [LICENSE](LICENSE) file for more information.
 ---
 
 <p align="center">
-    Made for the Roblox community by Kaylo. :3
+    <img width="67" height="67" alt=":3" src="https://github.com/user-attachments/assets/df0169c2-3ff6-4412-996d-5421880c9f12" /> 
 </p>
+
+<p align="center">
+  Made for the Roblox community by Kaylo.
+</p>
+
