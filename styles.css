@@ -1,3 +1,6 @@
+/* =========================
+   FULLSCREEN POPUP
+========================= */
 #roblox-catalog-overlay {
     position: fixed;
     top: 0;
@@ -16,19 +19,27 @@
     position: relative;
     width: 420px;
     max-width: 90%;
+    box-sizing: border-box;
     background: #1f1f1f;
     color: white;
     padding: 28px;
     border-radius: 18px;
     text-align: center;
     font-family: Arial, sans-serif;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
     animation: popupFade 0.25s ease;
 }
 
+#roblox-catalog-popup:focus {
+    outline: none;
+}
+
 #roblox-catalog-popup h2 {
-    margin-top: 0;
+    margin: 0;
     font-size: 24px;
+    color: inherit;
+    font-family: inherit;
+    text-wrap: balance;
 }
 
 #roblox-catalog-popup p {
@@ -37,13 +48,20 @@
     margin: 16px 0;
 }
 
+#roblox-catalog-popup p.rodeals-note {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 14px 0 0;
+    opacity: 0.85;
+}
+
 #roblox-popup-link {
     display: inline-block;
     margin-top: 10px;
     padding: 12px 18px;
     background: #00b06f;
-    color: white;
-    text-decoration: none;
+    color: white !important;
+    text-decoration: none !important;
     border-radius: 10px;
     font-weight: bold;
     transition: 0.2s ease;
@@ -51,6 +69,14 @@
 
 #roblox-popup-link:hover {
     background: #00cc7a;
+}
+
+#roblox-popup-link:focus-visible,
+#roblox-popup-close:focus-visible,
+#rodeals-popup-dismiss:focus-visible,
+.rodeals-save-btn:focus-visible {
+    outline: 2px solid #4da3ff;
+    outline-offset: 2px;
 }
 
 #roblox-popup-close {
@@ -64,18 +90,50 @@
     cursor: pointer;
 }
 
-@keyframes popupFade {
-    from {
-        transform: scale(0.92);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+#rodeals-popup-dismiss {
+    display: block;
+    margin: 16px auto 0;
+    padding: 4px 8px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 12px;
+    text-decoration: underline;
+    opacity: 0.65;
+    cursor: pointer;
 }
 
+#rodeals-popup-dismiss:hover {
+    opacity: 1;
+}
+
+/* =========================
+   ITEM-PAGE BUTTON
+========================= */
+.rodeals-save-btn {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #00b06f;
+    color: white !important;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.rodeals-save-btn:hover {
+    background: #00cc7a;
+}
+
+/* =========================
+   THEMES
+========================= */
 .rodeals-dark {
     background: #1f1f1f !important;
     color: white !important;
@@ -96,4 +154,69 @@
 
 .rodeals-light #roblox-popup-close {
     color: #111 !important;
+}
+
+@keyframes popupFade {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #roblox-catalog-popup {
+        animation: none;
+    }
+}
+
+/* =========================
+   UNSUPPORTED-ITEM WARNING
+========================= */
+#roblox-catalog-popup.rodeals-warning {
+    border-top: 4px solid #f0a500;
+}
+
+#rodeals-popup-ok {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background: #f0a500;
+    color: #1a1200;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#rodeals-popup-ok:hover {
+    background: #ffb71a;
+}
+
+#rodeals-popup-ok:focus-visible {
+    outline: 2px solid #4da3ff;
+    outline-offset: 2px;
+}
+
+.rodeals-notice {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border: 1px solid #f0c36d;
+    border-radius: 8px;
+    background: #fff4d6;
+    color: #5c3b00;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
 }
