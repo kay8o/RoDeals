@@ -1,93 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <style>
-        body {
-            font-family: Arial;
-            width: 220px;
-            padding: 12px;
-        }
-
-        /* Header */
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-
-        .logo {
-            width: 24px;
-            height: 24px;
-        }
-
-        h3 {
-            margin: 0;
-            font-size: 16px;
-        }
-
-        label {
-            font-size: 13px;
-        }
-
-        button {
-            width: 100%;
-            margin-top: 8px;
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 13px;
-            transition: 0.15s ease;
-        }
-
-        .green {
-            background: #00b06f;
-            color: white;
-        }
-
-        .green:hover {
-            background: #00cc7a;
-        }
-
-        .dark {
-            background: #111;
-            color: white;
-        }
-
-        .dark:hover {
-            background: #222;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RoDeals</title>
+    <link rel="stylesheet" href="settings.css">
 </head>
-
-<body>
+<body class="popup">
 
     <div class="header">
-        <img src="icon48.png" class="logo">
-        <h3>RoDeals</h3>
+        <img src="icon48.png" class="logo" alt="">
+        <h1>RoDeals</h1>
     </div>
 
-    <label>
-        <input type="checkbox" id="popupToggle">
-        Full-screen popup
-    </label>
+    <section class="card">
+        <label for="gameLink"><h2>Your Roblox game link</h2></label>
+        <div class="link-row">
+            <input id="gameLink" type="text" inputmode="url" spellcheck="false" autocomplete="off"
+                   placeholder="roblox.com/games/1234567890/">
+            <button class="btn btn-green" id="saveLink" type="button">Save</button>
+        </div>
+        <p class="status" id="linkStatus" role="status" aria-live="polite"></p>
+        <p class="hint">Use a game you own: Roblox pays the 40% commission to the game's owner.</p>
+        <div class="link-actions">
+            <button class="btn-text" id="testLink" type="button">Test link</button>
+            <button class="btn-text" id="resetLink" type="button" hidden>Use default game</button>
+        </div>
+    </section>
 
-    <br><br>
+    <section class="card">
+        <label class="toggle">
+            <span class="toggle-text">Full-screen reminder</span>
+            <input type="checkbox" id="popupToggle" role="switch">
+        </label>
+        <label class="toggle">
+            <span class="toggle-text">Item page button</span>
+            <input type="checkbox" id="buttonToggle" role="switch">
+        </label>
+        <label class="toggle">
+            <span class="toggle-text">Unsupported item warnings</span>
+            <input type="checkbox" id="warningsToggle" role="switch">
+        </label>
+    </section>
 
-    <label>
-        <input type="checkbox" id="buttonToggle">
-        Save 40% button
-    </label>
+    <button class="btn btn-dark" id="openOptions" type="button">More settings</button>
 
-    <button class="dark" id="openSettings">
-        Open Extension Settings
-    </button>
-
-    <script src="popup.js"></script>
-
+    <script src="common.js"></script>
+    <script src="settings-ui.js"></script>
 </body>
 </html>
