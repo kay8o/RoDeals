@@ -12,7 +12,6 @@
 ![Version](https://img.shields.io/github/v/release/kay8o/RoDeals?cacheSeconds=900)
 ![Stars](https://img.shields.io/github/stars/kay8o/RoDeals?cacheSeconds=900)
 ![Issues](https://img.shields.io/github/issues/kay8o/RoDeals?cacheSeconds=900)
-![Downloads](https://img.shields.io/github/downloads/kay8o/RoDeals/total?cacheSeconds=900)
 
 </div>
 
@@ -48,17 +47,17 @@ Built with simplicity, transparency, and performance in mind.
 
 Full-screen website pop-up when clicking on an item.
 <p align="left">
-    <img src="images/screenshot1.png" width="500">
+    <img src="images/screenshot1.jpg" width="500">
 </p>
 
 Save 40% button
 <p align="left">
-    <img src="images/screenshot2.png" width="500">
+    <img src="images/screenshot2.jpg" width="500">
 </p>
 
 Extension pop-up
 <p align="left">
-    <img src="images/screenshot3.png" width="500">
+    <img src="images/screenshot3.jpg" width="400">
 </p>
 
 ## Frequently Asked Questions (FAQ)
@@ -89,77 +88,30 @@ Because the project is open source, you can inspect exactly how permissions are 
 
 ### How do I edit the extension to use my own Roblox game link?
 
-> [!IMPORTANT]
-> Make sure to save your changes in Notepad by going to **File → Save**.
-
 You can customize the extension by replacing the default Roblox game link with your own.
 
-**Step 1: Open the extension file**
+**Step 1: Click the extension icon**
 
-After downloading the extension folder:
-
-Locate the file named ```content.js```
-
-Right-click it and select **Edit** or **Edit in Notepad**
+Open the extension pop-up window by clicking the icon in the top toolbar where Chrome extensions appear, and find the "Your Roblox game link" section.
 
 <p align="left">
-    <img src="images/step1.png" width="500">
+    <img src="images/step1.jpg" width="300">
 </p>
 
-**Step 2: Update the full-screen pop-up link**
+**Step 2: Add your game link & save**
 
-Find this section:
-
-``` href="https://www.roblox.com/games/5728150404/" ```
-
-Replace the URL with your own Roblox game link.
+Copy your Roblox game link, paste it into the text box, then click “Save” next to it.
 
 <p align="left">
-    <img src="images/step2.png" width="500">
+    <img src="images/step2.jpg" width="300">
 </p>
 
-**Step 3: Update the "Save 40%" button link**
+**Step 3: Make sure it's saved**
 
-Find this code:
-
-```saveBtn.onclick = () => { ```
-``` window.open(```
-      ```"https://www.roblox.com/games/5728150404/",```
-     ```"_blank"```
-  ```);```
-```};```
-
-Replace the Roblox game URL with your own link.
+You should now get a message stating "Using your game."
 
 <p align="left">
-    <img src="images/step3.png" width="500">
-</p>
-
-**Step 4: Reload the extension**
-
-After making your changes:
-
-- Open your browser’s Extensions page
-
-You can either use the "Open Extension Settings" button when clicking on the extension icon
-
-<p align="left">
-    <img src="images/step4.png" width="300">
-</p>
-
-### **OR**
-
-Type the following in your search bar:
-```text
-chrome://extensions
-```
-
-- Find the extension
-
-- Click the reload (refresh) icon
-
-<p align="left">
-    <img src="images/step4(2).png" width="300">
+    <img src="images/step3.jpg" width="300">
 </p>
 
 *The extension should now use your custom game link.*
