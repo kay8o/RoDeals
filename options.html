@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RoDeals settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body class="options">
+
+    <div class="header">
+        <img src="icon48.png" class="logo" alt="">
+        <h1>RoDeals settings</h1>
+    </div>
+
+    <section class="card">
+        <label for="gameLink"><h2>Your Roblox game link</h2></label>
+        <p class="sub">
+            Paste the link to a game you own. The "Open my game" button and the item-page
+            button will send you there. You can paste a full link, a link without
+            <code>https://</code>, or just the game's number.
+        </p>
+        <div class="link-row">
+            <input id="gameLink" type="text" inputmode="url" spellcheck="false" autocomplete="off"
+                   placeholder="https://www.roblox.com/games/1234567890/My-Game">
+            <button class="btn btn-green" id="saveLink" type="button">Save</button>
+        </div>
+        <p class="status" id="linkStatus" role="status" aria-live="polite"></p>
+        <div class="link-actions">
+            <button class="btn-text" id="testLink" type="button">Test link</button>
+            <button class="btn-text" id="resetLink" type="button" hidden>Use default game</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Reminders</h2>
+        <label class="toggle">
+            <span class="toggle-text">
+                Full-screen reminder
+                <small>A pop-up when you open the catalog, bundles, or looks.</small>
+            </span>
+            <input type="checkbox" id="popupToggle" role="switch">
+        </label>
+        <label class="toggle">
+            <span class="toggle-text">
+                Item page button
+                <small>Adds a button under the Buy button on item pages.</small>
+            </span>
+            <input type="checkbox" id="buttonToggle" role="switch">
+        </label>
+        <label class="toggle">
+            <span class="toggle-text">
+                Unsupported item warnings
+                <small>Warns you on items the 40% method can't be used for.</small>
+            </span>
+            <input type="checkbox" id="warningsToggle" role="switch">
+        </label>
+        <div class="field-row">
+            <label for="popupFrequency">Show the pop-up</label>
+            <select id="popupFrequency">
+                <option value="always">Every time I open the catalog</option>
+                <option value="hour">At most once an hour</option>
+                <option value="day">At most once a day</option>
+                <option value="week">At most once a week</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="card explain">
+        <h2>How the 40% method works</h2>
+        <p>
+            When someone buys an eligible Marketplace avatar item <em>inside</em> a Roblox game,
+            Roblox pays the <strong>owner of that game</strong> a commission of up to 40% of the
+            Robux spent. That's the "40% method". The item's creator still earns their own share.
+        </p>
+        <p>
+            That's why the link above should be a game you own: the commission goes to whoever
+            owns the game where the purchase happens. Eligibility depends on the item and the
+            game, and Roblox sets (and can change) the rates. See
+            <a href="https://create.roblox.com/docs/monetize-avatar" target="_blank" rel="noopener noreferrer">Roblox's creator docs</a>
+            for current terms.
+        </p>
+        <p>
+            <strong>Not supported:</strong> the Headless Horseman bundle and Limited items made by
+            Roblox can't be used with the 40% method. RoDeals warns you on those pages. UGC Limiteds
+            are supported.
+        </p>
+        <p>
+            If you haven't added your own game, RoDeals uses the RoDeals creator's game, so any
+            commission from purchases made there goes to them.
+        </p>
+    </section>
+
+    <p class="footer">
+        <span id="version"></span> &middot; RoDeals is a fan-made extension and isn't affiliated
+        with or endorsed by Roblox Corporation.
+    </p>
+
+    <script src="common.js"></script>
+    <script src="settings-ui.js"></script>
+</body>
+</html>
